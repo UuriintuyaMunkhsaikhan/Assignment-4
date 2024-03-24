@@ -133,7 +133,7 @@ nav ul li a:active::after {
 
 /* Styling for the options */
 .yes-no-options {
-    display: flex; /* Use flexbox for better alignment */
+    display: align;
 }
 
 /* Style for each option */
@@ -216,7 +216,7 @@ input[type="submit"]:hover {
 
 /* Main Content Styles */
 main {
-    margin-right: 650px; /* Adjust the margin-right value to create space from the right side */
+    margin-right: 450px; /* Adjust the margin-right value to create space from the right side */
     padding: 60px; /* Add padding */
     display: flex;
 }

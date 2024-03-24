@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GIC Student Progress Assessment</title>
-    <link href="styles.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -13,11 +13,18 @@
             <h1>Welcome to GIC Student Progress Assessment</h1>
         </div>
     </header>
+<<nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('information') }}">Information</a></li>
+            <li><a href="{{ url_for('data_collection') }}">Data collection</a></li>
+        </ul>
+    </nav>
+
     <main>
         <section id="information" class="section active">
             <h2>Information</h2>
-            <p>The GIC Student Progress Assessment serves as a valuable tool for evaluating various aspects of students'
-                academic performance and overall experience at Glasgow International College.
+            <p>The GIC Student Progress Assessment serves as a valuable tool for evaluating various aspects of students' academic performance and overall experience at Glasgow International College.
                 By collecting comprehensive data through this assessment, several benefits can be observed: </p>
             <h3>Benefits</h3>
             <ul>
@@ -41,17 +48,8 @@
     <footer>
         <p>&copy; 2024 GIC Student Progress Assessment</p>
     </footer>
-    <script>
-        function showSection(sectionId) {
-            document.querySelectorAll('.section').forEach(section => {
-                section.classList.remove('active');
-            });
-            document.getElementById(sectionId).classList.add('active');
-            document.querySelectorAll('nav ul li a').forEach(link => {
-                link.classList.remove('active');
-            });
-            document.querySelector(`nav ul li a[href="#${sectionId}"]`).classList.add('active');
-        }
-    </script>
 </body>
 </html>
+
+
+

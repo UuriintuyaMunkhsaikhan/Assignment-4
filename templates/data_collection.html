@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GIC Student Progress Assessment - Data Collection</title>
+</head>
+<body>
+    <h2>Data Collection</h2>
+    <form method="POST" action="{{ url_for('data_collection') }}">
+        {{ form.csrf_token }}
+        <div>
+            {{ form.first_name.label }} {{ form.first_name() }}
+        </div>
+        <div>
+            {{ form.last_name.label }} {{ form.last_name() }}
+        </div>
+        <div>
+            {{ form.gender.label }}
+            {% for subfield in form.gender %}
+                {{ subfield }} {{ subfield.label }}
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.student_number.label }} {{ form.student_number() }}
+        </div>
+        <div>
+            {{ form.email.label }} {{ form.email() }}
+        </div>
+        <div>
+            {{ form.answer.label }}
+            {% for subfield in form.answer %}
+                {{ subfield }} {{ subfield.label }}
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.grades.label }} {{ form.grades() }}
+        </div>
+        <div>
+            {{ form.satisfaction.label }} {{ form.satisfaction() }}
+        </div>
+        <div>
+            {{ form.improvements.label }} {{ form.improvements() }}
+        </div>
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</body>
+</html>
+

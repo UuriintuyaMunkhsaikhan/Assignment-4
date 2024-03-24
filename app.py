@@ -4,7 +4,7 @@ from forms import DataCollectionForm
 
 app = Flask(__name__, instance_relative_config=True)
 
-app.config['SECRET_KEY'] = '1234'
+app.config['SECRET_KEY'] = '123'
 
 @app.route('/')
 def home():
@@ -15,7 +15,7 @@ def information():
     return render_template('information.html')
 
 @app.route('/successful')
-def succeffful():
+def successffful():
     return render_template('successful.html')
 
 

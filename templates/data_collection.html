@@ -5,8 +5,23 @@
     <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
 </head>
 <body>
+<header>
+        <div class="container">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="University of Glasgow Logo" class="logo">
+            <h1>Welcome to GIC Student Progress Assessment</h1>
+        </div>
+    </header>
+<<nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('information') }}">Information</a></li>
+            <li><a href="{{ url_for('data_collection') }}">Data collection</a></li>
+        </ul>
+    </nav>
+<main>
+    <section id="Datacollection" class="section active">
     <h2>Data Collection</h2>
-    <form method="POST" action="{{ url_for('data_collection') }}">
+    <form method="POST" action="{{ url_for('data_collection') }}" >
         {{ form.csrf_token }}
         <div>
             {{ form.first_name.label }} {{ form.first_name() }}
@@ -45,6 +60,8 @@
             <input type="submit" value="Submit">
         </div>
     </form>
+    </section>
+</main>
 </body>
 </html>
 

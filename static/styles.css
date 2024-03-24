@@ -1,0 +1,241 @@
+/* Global Styles */
+
+/* Body Styles */
+
+body {
+    font-family: Arial, sans-serif; /* Set font family for entire website */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-image: url('pic.jpg'); /* Set background image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Set background position */
+    background-attachment: fixed; /* Keep background fixed */
+}
+
+
+/* Logo Styles */
+.logo {
+    margin-left: -460px; /* Position logo to the left */
+    width: 12%; /* Set logo width */
+    margin-right: 55px; /* Add minimal margin */
+    padding: 3px; /* Remove padding */
+    display: inline-block; /* Display as inline block */
+    vertical-align: middle; /* Align vertically in the middle */
+}
+
+/* Header Title Styles */
+header h1 {
+    font-size: 30px; /* Set font size for header title */
+    font-weight: 1000; /* Set font weight for header title */
+    color: #fff; /* Set text color for header title */
+    margin: 0; /* Remove default margin */
+    padding: 0px; /* Add padding */
+    display: inline-block; /* Display as inline block */
+    vertical-align: middle; /* Align vertically in the middle */
+}
+
+/* Adjust width and padding of the header */
+header {
+    background-color: #001f3f; /* Set background color for header */
+    color: #fff; /* Set text color for header */
+    padding: 0; /* Remove padding */
+    text-align: center; /* Align text to center */
+    position: relative; /* Ensure position is relative for absolute positioning of logo */
+    width: auto; /* Set header width to auto */
+    margin: 0; /* Remove default margin */
+}
+
+/* Navigation Styles */
+nav {
+    margin: 0; /* Remove default margin */
+    text-align: left; /* Align text to left */
+}
+
+/* Navigation List Styles */
+nav ul {
+    list-style-type: none; /* Remove list bullet */
+}
+
+/* Navigation List Item Styles */
+nav ul li {
+    display: inline; /* Display items inline */
+    margin-right: 0; /* Remove margin */
+}
+
+/* Navigation Link Styles */
+nav ul li a {
+    text-decoration: none; /* Remove default underline */
+    color: #000000; /* Set text color */
+    font-size: 20px; /* Set font size */
+    font-weight: 900; /* Set font weight */
+    padding: 10px; /* Add padding */
+    display: inline-block; /* Ensure consistent button size */
+    position: relative; /* Required for positioning pseudo-element */
+}
+
+/* Green underline */
+nav ul li a::after {
+    content: ''; /* Required for pseudo-element */
+    position: absolute; /* Position the underline */
+    left: 0; /* Align the underline with the left edge of the button */
+    bottom: 0; /* Align the underline with the bottom edge of the button */
+    width: 100%; /* Extend the underline to cover the entire width of the button */
+    height: 3px; /* Set the height of the underline */
+    background-color:  #006400; /* Set the color of the underline */
+    transition: opacity 0.9s ease; /* Smooth transition for the underline */
+    opacity: 0; /* Initially hide the underline */
+}
+
+/* Show the green underline when button is clicked */
+nav ul li a.active::after,
+nav ul li a:hover::after,
+nav ul li a:focus::after,
+nav ul li a:active::after {
+    opacity: 1; /* Show the green underline */
+}
+
+/* Gender Selection Styles */
+.gender-options input[type="radio"] {
+    display: none; /* Hide the actual radio buttons */
+}
+
+.gender-options label {
+    display: inline-block; /* Display options inline */
+    margin-right: 10px; /* Adjust spacing between label and radio button */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.gender-options input[type="radio"] + label::before {
+    content: ""; /* Create custom radio button */
+    display: inline-block;
+    width: 15px; /* Set width of radio button */
+    height: 15px; /* Set height of radio button */
+    border: 2px solid #000; /* Add border around radio button */
+    border-radius: 50%; /* Create round radio button */
+    margin-right: 5px; /* Adjust spacing between radio button and label */
+}
+
+.gender-options input[type="radio"]:checked + label::before {
+    background-color: #000; /* Change background color of radio button when checked */
+}
+
+/* Question Container Styles */
+.question-container {
+    margin-bottom: 10px; /* Add margin to separate from other elements */
+}
+
+/* Label for the question */
+.question-container label {
+    display: block; /* Display block to ensure proper spacing */
+    font-weight: bold; /* Make the label text bold */
+    margin-bottom: 5px; /* Add space below the label */
+}
+
+/* Styling for the options */
+.yes-no-options {
+    display: flex; /* Use flexbox for better alignment */
+}
+
+/* Style for each option */
+.yes-no-options label {
+    border: 1px solid #ccc; /* Add border to options */
+    border-radius: 5px; /* Add border radius */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Style for the selected option */
+.yes-no-options input[type="radio"]:checked + label {
+    background-color: #3498db; /* Change background color for selected option */
+    color: #fff; /* Set text color for selected option */
+    border-color: #3498db; /* Set border color for selected option */
+}
+
+/* Section Styles */
+.section {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    padding: 30px; /* Add padding */
+    margin-bottom: 10px; /* Add margin */
+    border-radius: 40px; /* Add border radius */
+    font-size: 17px; /* Set font size */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
+    display: none; /* Hide by default */
+}
+
+/* Active Section Styles */
+.section.active {
+    display: block; /* Show active section */
+}
+
+/* Form Styles */
+form {
+    border-radius: 30px; /* Add border radius */
+    padding: 20px; /* Add padding */
+    background-color:  #a9b7cf;/* Semi-transparent white background */
+    width: 85%; /* Set width */
+    margin: 0px auto; /* Center horizontally and add margin from top */
+}
+
+/* Label Styles */
+label {
+    display: block; /* Display block */
+    margin-bottom: 10px; /* Add margin */
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: calc(100% - 40px); /* Adjust width */
+    padding: 8px; /* Add padding */
+    margin-bottom: 10px; /* Add margin */
+    border: 2px solid #000; /* Set border */
+    border-radius: 20px; /* Add border radius */
+    box-sizing: border-box; /* Include padding and border in width/height */
+    font-size: 16px; /* Set font size */
+
+}
+
+/* Submit Button Styles */
+input[type="submit"] {
+    width: calc(100% - 40px); /* Adjust width */
+    padding: 10px; /* Add padding */
+    border: none; /* Remove border */
+    border-radius: 2px; /* Add border radius */
+    background-color: #0056b3; /* Set background color */
+    color: black; /* Set text color */
+    font-size: 20px; /* Set font size */
+    cursor: pointer; /* Set cursor */
+
+}
+
+/* Hover Submit Button Styles */
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Set background color */
+}
+
+/* Main Content Styles */
+main {
+    margin-right: 650px; /* Adjust the margin-right value to create space from the right side */
+    padding: 60px; /* Add padding */
+    display: flex;
+}
+
+/* Footer Styles */
+footer {
+    background-color: white; /* Set background color */
+    color: black; /* Set text color */
+    text-align: center; /* Align text to center */
+    position: fixed; /* Set position */
+    bottom: 0; /* Stick to the bottom */
+    left: 0; /* Align to left */
+    width: 100%; /* Set width */
+    padding: 5px 0; /* Add padding */
+    z-index: 999; /* Set z-index */
+}
+
+/* Footer Paragraph Styles */
+footer p {
+    font-size: 20px; /* Set font size */
+    margin: 0; /* Remove default margin */
+}

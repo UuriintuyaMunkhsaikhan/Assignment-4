@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIC Student Progress Assessment</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="University of Glasgow Logo" class="logo">
+            <h1>Welcome to GIC Student Progress Assessment</h1>
+        </div>
+    </header>
+    <main>
+        <section id="information" class="section active">
+            <h2>Information</h2>
+            <p>The GIC Student Progress Assessment serves as a valuable tool for evaluating various aspects of students'
+                academic performance and overall experience at Glasgow International College.
+                By collecting comprehensive data through this assessment, several benefits can be observed: </p>
+            <h3>Benefits</h3>
+            <ul>
+                <li>Improves academic programs based on student feedback.</li>
+                <li>Enhances overall student experience and satisfaction.</li>
+                <li>Helps in identifying areas for improvement.</li>
+            </ul>
+            <h3>FAQs</h3>
+            <dl>
+                <dt>What is the purpose of this assessment?</dt>
+                <dd>The primary purpose is to track the academic journey of students and improve the overall academic experience.</dd>
+
+                <dt>How often is the data collected?</dt>
+                <dd>The data is collected periodically to ensure accurate and up-to-date insights.</dd>
+
+                <dt>Is the data confidential?</dt>
+                <dd>Yes, all data collected is kept confidential and is used solely for academic improvement purposes.</dd>
+            </dl>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 GIC Student Progress Assessment</p>
+    </footer>
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+            document.querySelectorAll('nav ul li a').forEach(link => {
+                link.classList.remove('active');
+            });
+            document.querySelector(`nav ul li a[href="#${sectionId}"]`).classList.add('active');
+        }
+    </script>
+</body>
+</html>

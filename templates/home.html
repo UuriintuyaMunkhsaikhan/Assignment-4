@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIC Student Progress Assessment</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="University of Glasgow Logo" class="logo">
+            <h1>Welcome to GIC Student Progress Assessment</h1>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('information') }}">Information</a></li>
+            <li><a href="{{ url_for('data collection') }}">Data Collection</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="welcome" class="section active">
+            <h2>Welcome</h2>
+            <p>Welcome to the GIC Student Progress Assessment platform. <br>
+                This is a comprehensive tool aimed at tracking the academic journey of students at Glasgow International College.
+                Our platform offers an insightful glimpse into students' achievements and experiences, fostering a culture of continuous improvement.
+                <br>Explore our "Information" section to understand the significance of data collection <br>
+                Please go to our dedicated page  "Data Collection" to contribute to this invaluable process.
+                Join us in shaping a brighter academic future! </p>
+            <h3>Testimonials</h3>
+            <blockquote>
+                "The GIC Student Progress Assessment has been instrumental in helping me understand my academic strengths and areas of improvement."
+                <cite>- John Doe</cite>
+            </blockquote>
+            <blockquote>
+                "I appreciate the effort GIC puts into collecting valuable data that helps enhance our academic experience."
+                <cite>- Jane Doe</cite>
+            </blockquote>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 GIC Student Progress Assessment</p>
+    </footer>
+</body>
+</html>
